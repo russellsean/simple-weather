@@ -1,6 +1,6 @@
-# simple-weather
+# simple-inout
 
-> Simple weather app using firebase and vuejs
+> Simple inout app using firebase and vuejs
 
 ## Build Setup
 
