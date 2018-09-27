@@ -1,40 +1,20 @@
 <template>
   <v-container fluid>
-    <template v-if="$vuetify.breakpoint.mdAndUp">
-      <v-data-table :items="employees">
-
-      </v-data-table>
-
-    </template>
-    <template v-else>
-      <v-data-iterator>
-
-      </v-data-iterator>
-    </template>
+    <pre>{{weather}}</pre>
   </v-container>
 </template>
 
 <script>
+import { db } from '../main'
 export default {
   data() {
     return {
-      employees: [
-        {
-          'name': 'Sean Russell',
-          'id': '1234',
-          'status': 'In'
-        },
-        {
-          'name': 'Joe Shmow',
-          'id': '1235',
-          'status': 'In'
-        },
-        {
-          'name': 'Mike Smith',
-          'id': '1236',
-          'status': 'In'
-        },
-      ]
+      weather:[],
+    }
+  },
+  firestore () {
+    return {
+      weather: db.collection('cities')
     }
   }
 }

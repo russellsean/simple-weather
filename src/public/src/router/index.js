@@ -8,8 +8,8 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '',
-      name: 'Status Board',
+      path: '/',
+      name: 'Dashboard',
       component: Board
     },
     {

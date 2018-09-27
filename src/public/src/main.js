@@ -5,6 +5,7 @@ import { store } from './store'
 import App from './App'
 import VueFire from 'vuefire'
 import firebase from 'firebase/app'
+import 'firebase/firestore'
 import { config } from '../../fbConfig'
 import router from './router'
 import Vuetify from 'vuetify'
@@ -17,12 +18,15 @@ require("firebase/messaging");
 
 var firebaseApp = firebase.initializeApp(config);
 
-var db = firebaseApp.firestore();
 
 Vue.use(VueFire);
 Vue.use(Vuetify);
 
-Vue.config.productionTip = false
+const settings = {timestampsInSnapshots: true};
+export const db = firebaseApp.firestore();
+db.settings(settings);
+
+Vue.config.productionTip = false;
 
 /* eslint-disable no-new */
 new Vue(
@@ -35,8 +39,7 @@ new Vue(
     methods: {
     },
     mounted() {
-      
+
     }
   },
-
 )
