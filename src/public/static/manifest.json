@@ -1,6 +1,6 @@
 {
-  "name": "simple-weather",
-  "short_name": "simple-weather",
+  "name": "in-out-board",
+  "short_name": "in-out-board",
   "icons": [
     {
       "src": "/static/img/icons/android-chrome-192x192.png",
